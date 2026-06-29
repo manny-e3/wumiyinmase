@@ -148,7 +148,7 @@
                     <ul class="list-style-one">
                         <li><i class="fa fa-map-marker-alt"></i> Lagos, Nigeria</li>
                         <li><i class="fa fa-clock"></i> Mon - Sat: 8:00am - 6:00pm</li>
-                        <li><i class="fa fa-phone-volume"></i> <a href="tel:+2348000000000">+234 (0) 800 WUMIYIN</a></li>
+                        <li><i class="fa fa-phone-volume"></i> <a href="tel:+2348069675585">+234 806 967 5585</a></li>
                     </ul>
                 </div>
 
@@ -225,7 +225,7 @@
                             <div class="contact-info-box">
                                 <i class="icon lnr-icon-phone-handset"></i>
                                 <span class="title">Call Now</span>
-                                <a href="tel:+2348000000000">+234 (0) 800 WUMIYIN</a>
+                                <a href="tel:+2348069675585">+234 806 967 5585</a>
                             </div>
                         </li>
                         <li>
@@ -296,7 +296,7 @@
                                 <h4 class="title">Contact</h4>
                                 <div class="text">
                                     <a href="mailto:info@wumiyinmase.com">info@wumiyinmase.com</a>
-                                    <a href="tel:+2348000000000">+234 (0) 800 WUMIYIN</a>
+                                    <a href="tel:+2348000000000">+234 806 967 5585</a>
                                 </div>
                             </div>
                         </div>
