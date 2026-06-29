@@ -31,16 +31,16 @@
 					<ul class="list-unstyled contact-details__info">
 						<li>
 							<div class="icon">
-								<span class="lnr-icon-phone-plus"></span>
+								<span class="lnr-icon-phone-plus" style="color: #999" ></span>
 							</div>
 							<div class="text">
 								<h6>Have any question?</h6>
-								<a href="tel:+2348000000000"><span>Free</span> +234 800 WUMIYIN</a>
+								<a href="tel:+2348069675585">+234 806 967 5585</a>,  &nbsp; <a href="tel:+2347037395331">+234 703 739 5331</a>
 							</div>
 						</li>
 						<li>
 							<div class="icon">
-								<span class="lnr-icon-envelope1"></span>
+								<span class="lnr-icon-envelope1" style="color: #999" ></span>
 							</div>
 							<div class="text">
 								<h6>Write email</h6>
@@ -49,11 +49,11 @@
 						</li>
 						<li>
 							<div class="icon">
-								<span class="lnr-icon-location"></span>
+								<span class="lnr-icon-location" style="color: #999" ></span>
 							</div>
 							<div class="text">
 								<h6>Visit office</h6>
-								<span>Corporate Head Office, Lagos, Nigeria</span>
+								<span>Wing A Block 1, Office 006 NAHCO COMPLEX, MM Int'l Airport Ikeja Lagos Nigeria</span>
 							</div>
 						</li>
 					</ul>
@@ -158,7 +158,7 @@
 		<div class="row">
 			<!-- Google Map HTML Codes -->
 			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6730035745904!2d3.3172206747326887!3d6.56841012264034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91e01ab569df%3A0x167c11453a0e4337!2sNAHCO%20COMPLEX!5e1!3m2!1sen!2sng!4v1782758544018!5m2!1sen!2sng"
 				data-tm-width="100%"
 				height="500"
 				frameborder="0"

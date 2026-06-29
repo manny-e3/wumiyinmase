@@ -146,9 +146,10 @@
                 <div class="top-left">
                     <!-- Info List -->
                     <ul class="list-style-one">
-                        <li><i class="fa fa-map-marker-alt"></i> Lagos, Nigeria</li>
-                        <li><i class="fa fa-clock"></i> Mon - Sat: 8:00am - 6:00pm</li>
-                        <li><i class="fa fa-phone-volume"></i> <a href="tel:+2348069675585">+234 806 967 5585</a></li>
+                        <li><i class="fa fa-map-marker-alt"></i>NAHCO COMPLEX, MM Int'l Airport Ikeja Lagos Nigeria 
+</li>
+                        <!-- <li><i class="fa fa-clock"></i> Mon - Sat: 8:00am - 6:00pm</li> -->
+                        <li><i class="fa fa-phone-volume"></i> <a href="tel:+2348069675585">+234 806 967 5585</a>,  &nbsp; <a href="tel:+2347037395331">+234 703 739 5331</a></li>
                     </ul>
                 </div>
 
@@ -285,7 +286,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon flaticon-international-shipping-2"></i></div>
                                 <h4 class="title">Address</h4>
-                                <div class="text">Corporate Head Office, Lagos, Nigeria</div>
+                                <div class="text">NAHCO COMPLEX, MM Int'l Airport Ikeja Lagos Nigeria </div>
                             </div>
                         </div>
 
@@ -296,7 +297,7 @@
                                 <h4 class="title">Contact</h4>
                                 <div class="text">
                                     <a href="mailto:info@wumiyinmase.com">info@wumiyinmase.com</a>
-                                    <a href="tel:+2348000000000">+234 806 967 5585</a>
+                                   <a href="tel:+2348069675585">+234 806 967 5585</a>,  &nbsp; <a href="tel:+2347037395331">+234 703 739 5331</a>
                                 </div>
                             </div>
                         </div>
