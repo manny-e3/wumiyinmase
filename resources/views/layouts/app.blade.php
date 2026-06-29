@@ -427,7 +427,7 @@
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2348000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/2348069675585" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
