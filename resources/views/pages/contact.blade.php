@@ -169,3 +169,20 @@
 	</div>
 </section>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('#contact_form').on('submit', function(e) {
+            if (this.checkValidity()) {
+                var $submitBtn = $(this).find('button[type="submit"]');
+                var $btnTitle = $submitBtn.find('.btn-title');
+                
+                $submitBtn.attr('disabled', true);
+                $(this).find('button[type="reset"]').attr('disabled', true);
+                $btnTitle.html('<i class="fa fa-spinner fa-spin" style="margin-right: 8px;"></i> Sending Request...');
+            }
+        });
+    });
+</script>
+@endpush

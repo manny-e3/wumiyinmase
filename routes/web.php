@@ -9,3 +9,4 @@ Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/services/{slug}', [PageController::class, 'serviceDetail'])->name('service.detail');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [PageController::class, 'submitContact'])->name('contact.submit');
+

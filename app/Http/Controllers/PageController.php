@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ContactSubmission;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewContactSubmission;
+use App\Mail\ContactSubmissionConfirmation;
 
 class PageController extends Controller
 {
@@ -88,7 +92,7 @@ class PageController extends Controller
 
     public function submitContact(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'phone' => 'required|string',
@@ -97,6 +101,20 @@ class PageController extends Controller
             'destination' => 'nullable|string',
             'message' => 'required|string'
         ]);
+
+        // 1. Store in Database
+        $submission = ContactSubmission::create($validated);
+
+        try {
+            // 2. Send email to Wumiyin & Mase team
+            Mail::to('info@wumiyinmase.com')->send(new NewContactSubmission($submission));
+
+            // 3. Send email to the user
+            Mail::to($submission->email)->send(new ContactSubmissionConfirmation($submission));
+        } catch (\Exception $e) {
+            // Log mail sending error and prevent crash
+            \Illuminate\Support\Facades\Log::error('Mail sending failed: ' . $e->getMessage());
+        }
 
         return redirect()->back()->with('success', 'Thank you! Your quote request has been sent successfully. Our team will contact you shortly.');
     }
