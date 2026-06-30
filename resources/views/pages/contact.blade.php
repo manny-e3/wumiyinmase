@@ -65,25 +65,7 @@
 					<h2>Let’s Get Your Cargo Moving</h2>
 				</div>
 				
-				<!-- Success and Error alerts -->
-				@if(session('success'))
-					<div class="alert alert-success alert-dismissible fade show" role="alert" style="border-left: 4px solid #28a745; margin-bottom: 25px;">
-						<strong>Success!</strong> {{ session('success') }}
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				@endif
 
-				@if($errors->any())
-					<div class="alert alert-danger" style="border-left: 4px solid #dc3545; margin-bottom: 25px;">
-						<ul class="mb-0">
-							@foreach($errors->all() as $error)
-								<li>{{ $error }}</li>
-							@endforeach
-						</ul>
-					</div>
-				@endif
 
 				<!-- Contact Form -->
 				<form id="contact_form" name="contact_form" action="{{ route('contact.submit') }}" method="post">
@@ -171,8 +153,42 @@
 @endsection
 
 @push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function() {
+        // Dynamic SweetAlert2 for Laravel session success message
+        @if(session('success'))
+            Swal.fire({
+                title: 'Success!',
+                text: "{{ session('success') }}",
+                icon: 'success',
+                confirmButtonColor: '#fcdb65',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'theme-btn btn-style-one'
+                }
+            });
+        @endif
+
+        // Dynamic SweetAlert2 for Laravel session validation errors
+        @if($errors->any())
+            var errorList = {!! json_encode($errors->all()) !!};
+            var errorHtml = '<ul style="text-align: left; margin: 0; padding-left: 15px; font-size: 14px; line-height: 1.6;">';
+            errorList.forEach(function(error) {
+                errorHtml += '<li style="margin-bottom: 5px; color: #333;">' + error + '</li>';
+            });
+            errorHtml += '</ul>';
+
+            Swal.fire({
+                title: 'Validation Errors',
+                html: errorHtml,
+                icon: 'error',
+                confirmButtonColor: '#000000',
+                confirmButtonText: 'Try Again'
+            });
+        @endif
+
+        // Button disabling & loading indicator on valid submit
         $('#contact_form').on('submit', function(e) {
             if (this.checkValidity()) {
                 var $submitBtn = $(this).find('button[type="submit"]');

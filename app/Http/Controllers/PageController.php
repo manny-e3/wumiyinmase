@@ -107,7 +107,8 @@ class PageController extends Controller
 
         try {
             // 2. Send email to Wumiyin & Mase team
-            Mail::to('info@wumiyinmase.com')->send(new NewContactSubmission($submission));
+            $adminEmail = trim(env('ADMIN_EMAIL'));
+            Mail::to($adminEmail)->send(new NewContactSubmission($submission));
 
             // 3. Send email to the user
             Mail::to($submission->email)->send(new ContactSubmissionConfirmation($submission));
