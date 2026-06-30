@@ -132,6 +132,79 @@
         .whatsapp-float i {
             margin: 0;
         }
+        /* Custom Gallery Grid Styles */
+        .gallery-card-box {
+            position: relative;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .gallery-img-box {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 280px;
+        }
+        .gallery-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .gallery-card-box:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-card-box:hover .gallery-img-box img {
+            transform: scale(1.1);
+        }
+        .gallery-zoom-icon {
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+            background-color: #fcdb65;
+            color: #000000 !important;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .gallery-zoom-icon:hover {
+            transform: scale(1.1);
+            background-color: #ffffff;
+        }
+        .gallery-cat {
+            font-size: 11px;
+            color: #fcdb65 !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .gallery-title {
+            font-size: 20px;
+            color: #ffffff !important;
+            font-weight: 700;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -194,6 +267,7 @@
                                         <li><a href="{{ route('service.detail', 'warehousing-haulage') }}">Warehousing & Local Haulage</a></li>
                                     </ul>
                                 </li>
+                                <li class="{{ request()->routeIs('gallery') ? 'current' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
                                 <li class="{{ request()->routeIs('contact') ? 'current' : '' }}"><a href="{{ route('contact') }}">Contact Us</a></li>
                             </ul>
                         </nav>

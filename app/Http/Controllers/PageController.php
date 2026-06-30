@@ -61,7 +61,35 @@ class PageController extends Controller
     public function home()
     {
         $services = $this->services;
-        return view('pages.home', compact('services'));
+
+        $galleryPath = public_path('images/gallery');
+        $galleryImages = [];
+
+        if (file_exists($galleryPath) && is_dir($galleryPath)) {
+            $files = glob($galleryPath . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
+            if ($files) {
+                foreach ($files as $file) {
+                    $galleryImages[] = 'images/gallery/' . basename($file);
+                }
+            }
+        }
+
+        // Fallback in case folder is empty or missing
+        if (empty($galleryImages)) {
+            $galleryImages = [
+                'images/resource/project-1.jpg',
+                'images/resource/project-2.jpg',
+                'images/resource/project-3.jpg',
+                'images/resource/project-4.jpg',
+                'images/resource/about-1.jpg',
+                'images/resource/about-2.jpg'
+            ];
+        }
+
+        shuffle($galleryImages);
+        $randomImages = array_slice($galleryImages, 0, 6);
+
+        return view('pages.home', compact('services', 'randomImages'));
     }
 
     public function about()
@@ -118,5 +146,34 @@ class PageController extends Controller
         }
 
         return redirect()->back()->with('success', 'Thank you! Your quote request has been sent successfully. Our team will contact you shortly.');
+    }
+
+    public function gallery()
+    {
+        $galleryPath = public_path('images/gallery');
+        $galleryImages = [];
+
+        if (file_exists($galleryPath) && is_dir($galleryPath)) {
+            $files = glob($galleryPath . '/*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
+            if ($files) {
+                foreach ($files as $file) {
+                    $galleryImages[] = 'images/gallery/' . basename($file);
+                }
+            }
+        }
+
+        // Fallback in case folder is empty or missing
+        if (empty($galleryImages)) {
+            $galleryImages = [
+                'images/resource/project-1.jpg',
+                'images/resource/project-2.jpg',
+                'images/resource/project-3.jpg',
+                'images/resource/project-4.jpg',
+                'images/resource/about-1.jpg',
+                'images/resource/about-2.jpg'
+            ];
+        }
+
+        return view('pages.gallery', compact('galleryImages'));
     }
 }

@@ -166,6 +166,45 @@
 </section>
 <!-- End Core Services Section -->
 
+<!-- Gallery Section -->
+<section class="gallery-section pt-100 pb-70" style="background-color: #f8f9fa;">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="sub-title" style="color: #fcdb65 !important; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">OUR GALLERY</span>
+            <h2 style="font-weight: 800; font-size: 36px; color: #000000; margin-top: 5px;">Logistics In Action</h2>
+        </div>
+
+        <div class="row">
+            @foreach($randomImages as $image)
+            @php
+                $categories = ['Air Freight', 'Ocean Freight', 'Relocation', 'Pet Shipping', 'Customs Clearance', 'Warehousing'];
+                $titles = ['Cargo Operations', 'Global Shipments', 'Household Packing', 'Safe Pet Travel', 'Clearance Hub', 'Secure Storage'];
+                $cat = $categories[$loop->index % count($categories)];
+                $title = $titles[$loop->index % count($titles)];
+            @endphp
+            <!-- Gallery Item -->
+            <div class="gallery-item-column col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="{{ $loop->index * 150 }}ms">
+                <div class="gallery-card-box">
+                    <div class="gallery-img-box">
+                        <img src="{{ asset($image) }}" alt="Wumiyin & Mase Logistics" />
+                        <div class="gallery-overlay">
+                            <a href="{{ asset($image) }}" class="lightbox-image" data-fancybox="gallery" data-caption="Wumiyin & Mase - {{ $title }}">
+                                <span class="gallery-zoom-icon"><i class="fa fa-plus"></i></span>
+                            </a>
+                            <div class="gallery-text">
+                                <!-- <span class="gallery-cat">{{ $cat }}</span>
+                                <h4 class="gallery-title">{{ $title }}</h4> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
 <!-- Call To Action Quote Section -->
 <section class="cta-section pt-80 pb-80" style="background: linear-gradient(135deg, #0d233a 0%, #1a3c61 100%); color: #fff;">
     <div class="auto-container text-center">
