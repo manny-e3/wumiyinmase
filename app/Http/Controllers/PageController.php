@@ -14,7 +14,7 @@ class PageController extends Controller
             'short_desc' => 'We connect Nigeria to major global trade hubs through robust air and ocean freight networks.',
             'body' => 'We connect Nigeria to major global trade hubs through robust air and ocean freight networks. Whether you need rapid air delivery for urgent items or cost-effective sea shipping for bulk cargo, we manage the entire journey with strict attention to timeline and budget constraints.',
             'icon' => 'flaticon-airplane-2',
-            'image' => 'images/resource/service-1.jpg'
+            'image' => 'images/resource/globalair.jpg'
         ],
         'household-goods-relocation' => [
             'slug' => 'household-goods-relocation',
@@ -23,7 +23,7 @@ class PageController extends Controller
             'short_desc' => 'Moving your home or shipping personal belongings requires extreme care. We handle your household goods with the utmost respect.',
             'body' => 'Moving your home or shipping personal belongings requires extreme care. We handle your household goods with the utmost respect. Our secure packaging, careful loading, and dependable transit ensure your personal history arrives safely at its new destination.',
             'icon' => 'flaticon-cargo-boat',
-            'image' => 'images/resource/service-2.jpg'
+            'image' => 'images/resource/householdpic.jpg'
         ],
         'pet-shipping' => [
             'slug' => 'pet-shipping',
@@ -32,7 +32,7 @@ class PageController extends Controller
             'short_desc' => 'We understand that pets are cherished family members. Dedicated climate-controlled transport and compliance.',
             'body' => 'We understand that pets are cherished family members. Our dedicated pet relocation specialists manage climate-controlled transport, proper documentation, and veterinary compliance. We ensure a warm, comfortable, and completely safe travel experience for your animals.',
             'icon' => 'flaticon-logistics-delivery',
-            'image' => 'images/resource/service-3.jpg'
+            'image' => 'images/resource/dog.jpeg'
         ],
         'customs-clearance' => [
             'slug' => 'customs-clearance',
@@ -50,7 +50,7 @@ class PageController extends Controller
             'short_desc' => 'Keep your inventory safe in secure facilities with dependable final-mile delivery across Nigeria.',
             'body' => 'Keep your inventory safe in our secure, well-monitored warehousing facilities. When your goods are ready to move, our local haulage fleet ensures dependable final-mile delivery to any destination within Nigeria.',
             'icon' => 'flaticon-warehouse-1',
-            'image' => 'images/resource/service-5.jpg'
+            'image' => 'images/resource/wharhouse.jpg'
         ]
     ];
 

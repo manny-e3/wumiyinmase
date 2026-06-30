@@ -87,6 +87,7 @@
             box-shadow: 0 4px 15px rgba(252, 219, 101, 0.3) !important;
         }
 
+
         .main-menu .navigation > li > a {
             font-weight: 600;
         }
@@ -320,7 +321,7 @@
                 <div class="auto-container">
                     <div class="row">
                         <!--Footer Column-->
-                        <div class="footer-column col-xl-3 col-lg-12 col-md-6 col-sm-12">
+                        <div class="footer-column col-xl-4 col-lg-12 col-md-6 col-sm-12">
                             <div class="footer-widget about-widget">
                                 <div class="logo">
                                     <a href="{{ route('home') }}">
@@ -333,7 +334,7 @@
                         </div>
 
                         <!--Footer Column-->
-                        <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget">
                                 <h3 class="widget-title">Services</h3>
                                 <ul class="user-links">
@@ -347,7 +348,7 @@
                         </div>
 
                         <!--Footer Column-->
-                        <div class="footer-column col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <!-- <div class="footer-column col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <div class="footer-widget gallery-widget">
                                 <h3 class="widget-title">Projects</h3>
                                 <div class="widget-content">
@@ -378,10 +379,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!--Footer Column-->
-                        <div class="footer-column col-xl-3 col-lg-5 col-md-6 col-sm-12">
+                        <div class="footer-column col-xl-4 col-lg-5 col-md-6 col-sm-12">
                             <div class="footer-widget">
                                 <h3 class="widget-title">Newsletter</h3>
                                 <div class="widget-content">
@@ -389,10 +390,10 @@
                                         <div class="text">Subscribe our newsletter to get our latest update & news</div>
                                         <form method="post" action="#">
                                             <div class="form-group">
-                                                <input type="email" name="email" class="email" value="" placeholder="Email Address" required="" />
+                                                <!-- <input type="email" name="email" class="email" value="" placeholder="Email Address" required="" />
                                                 <button type="button" class="theme-btn btn-style-one">
                                                     <span class="btn-title"><i class="fa fa-paper-plane"></i></span>
-                                                </button>
+                                                </button> -->
                                             </div>
                                         </form>
                                     </div>

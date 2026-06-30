@@ -26,7 +26,7 @@
 			<div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="{{ $loop->index * 300 }}ms">
 				<div class="inner-box">
 					<div class="image-box">
-						<figure class="image"><a href="{{ route('service.detail', $svc['slug']) }}"><img src="{{ asset($svc['image']) }}" alt="{{ $svc['title'] }}"></a></figure>
+						<figure class="image"><a href="{{ route('service.detail', $svc['slug']) }}"><img src="{{ asset($svc['image']) }}" alt="{{ $svc['title'] }}" style="height: 250px; width: 100%; object-fit: cover;"></a></figure>
 					</div>
 					<div class="content-box">
 						<i class="icon {{ $svc['icon'] }}"></i>
